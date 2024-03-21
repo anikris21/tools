@@ -1,0 +1,11 @@
+#command to bulk index documents
+curl --request POST -u elastic:<> -H "Content-Type: application/json" \
+--data '{"index": {"_id": "Id_Walmart_001" }}
+{"machine": "us-east-001", "ip": "10.0.0.1"}
+{"create": {"_id": "Id_Walmart_002" }}
+{"machine": "us-west-001", "ip": "10.0.0.10"}
+' \
+https://localhost:9200/macmetrics/_bulk
+
+index - creates/updates an index doc
+create - error if doc already exists
