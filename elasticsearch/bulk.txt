@@ -1,7 +1,16 @@
 # list all documents
 https://localhost:9200/macmetrics/_search
 
-#command to bulk index documents
+# Bulk
+index {}
+create {}
+update {}
+delete {}
+
+- followed by new line delimited JSON
+
+
+## Command to bulk index documents
 curl --request POST -u elastic:<> -H "Content-Type: application/json" \
 --data '{"index": {"_id": "Id_Walmart_001" }}
 {"machine": "us-east-001", "ip": "10.0.0.1"}
