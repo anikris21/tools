@@ -19,5 +19,12 @@ curl --request POST -u elastic:<> -H "Content-Type: application/json" \
 ' \
 https://localhost:9200/macmetrics/_bulk
 
+curl --request PUT -u elastic:test_12345 -H "Content-Type: application/json" \
+--data '{"create": {"_id": "Id_Walmart_001_01" }}
+{"machine": "us-east-001", "ip": "10.0.0.1"}
+{"create": {"_id": "Id_Walmart_002_01" }}
+{"machine": "us-west-001", "ip": "10.0.0.10"}
+' \
+
 index - creates/updates an index doc
 create - error if doc already exists
